@@ -62,6 +62,7 @@ function Header() {
         </Stack>
         <Box sx={{ display: { xs: 'inline-flex', sm: 'none' } }}>
           <IconButton variant="plain" color="neutral" onClick={() => setOpen(true)}>
+            set open
           </IconButton>
           <Drawer
             sx={{ display: { xs: 'inline-flex', sm: 'none' } }}
