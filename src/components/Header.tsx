@@ -1,32 +1,50 @@
-import { Box, Button, DialogTitle, Drawer, IconButton, ModalClose, Stack } from "@mui/joy";
+import {
+  Box,
+  Button,
+  Container,
+  DialogTitle,
+  Drawer,
+  IconButton,
+  ModalClose,
+  Stack,
+} from "@mui/joy";
 import React from "react";
+import ModeToggle from "./ModeToggle";
 
 function Header() {
-    const [open, setOpen] = React.useState(false);
-    return (
-      <Box
-        sx={{
-          display: 'flex',
-          flexGrow: 1,
-          justifyContent: 'space-between',
-        }}
-      >
+  const [open, setOpen] = React.useState(false);
+  return (
+    <Box
+      component="header"
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        position: "sticky",
+        zIndex:20,
+        top: 0,
+        backgroundColor: "red",
+      }}
+    >
+      <Container>
         <Stack
           direction="row"
           justifyContent="center"
           alignItems="center"
           spacing={1}
-          sx={{ display: { xs: 'none', sm: 'flex' } }}
+          sx={{ display: { xs: "none", sm: "flex" } }}
         >
+          <ModeToggle />
           <IconButton
             size="md"
             variant="outlined"
             color="neutral"
             sx={{
-              display: { xs: 'none', sm: 'inline-flex' },
-              borderRadius: '50%',
+              display: { xs: "none", sm: "inline-flex" },
+              borderRadius: "50%",
             }}
           >
+            IconButton
           </IconButton>
           <Button
             variant="plain"
@@ -34,7 +52,7 @@ function Header() {
             component="a"
             href="/joy-ui/getting-started/templates/email/"
             size="sm"
-            sx={{ alignSelf: 'center' }}
+            sx={{ alignSelf: "center" }}
           >
             Email
           </Button>
@@ -45,7 +63,7 @@ function Header() {
             component="a"
             href="/joy-ui/getting-started/templates/team/"
             size="sm"
-            sx={{ alignSelf: 'center' }}
+            sx={{ alignSelf: "center" }}
           >
             Team
           </Button>
@@ -55,17 +73,21 @@ function Header() {
             component="a"
             href="/joy-ui/getting-started/templates/files/"
             size="sm"
-            sx={{ alignSelf: 'center' }}
+            sx={{ alignSelf: "center" }}
           >
             Files
           </Button>
         </Stack>
-        <Box sx={{ display: { xs: 'inline-flex', sm: 'none' } }}>
-          <IconButton variant="plain" color="neutral" onClick={() => setOpen(true)}>
+        <Box sx={{ display: { xs: "inline-flex", sm: "none" } }}>
+          <IconButton
+            variant="plain"
+            color="neutral"
+            onClick={() => setOpen(true)}
+          >
             Open Drawer
           </IconButton>
           <Drawer
-            sx={{ display: { xs: 'inline-flex', sm: 'none' } }}
+            sx={{ display: { xs: "inline-flex", sm: "none" } }}
             open={open}
             onClose={() => setOpen(false)}
           >
@@ -73,10 +95,9 @@ function Header() {
             <DialogTitle>Acme Co.</DialogTitle>
           </Drawer>
         </Box>
-  
-       
-      </Box>
-    );
-  }
+      </Container>
+    </Box>
+  );
+}
 
-  export default Header
+export default Header;

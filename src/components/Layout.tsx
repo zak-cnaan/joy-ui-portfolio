@@ -1,6 +1,6 @@
 import {
+    Box,
   Button,
-  Container,
   FormControl,
   FormLabel,
   Input,
@@ -8,22 +8,22 @@ import {
   Sheet,
   Typography,
 } from "@mui/joy";
-import ModeToggle from "./ModeToggle";
 import Header from "./Header";
 
 function Layout() {
   return (
     <div className="layout">
-      <header>
-        <Container>
-            <Header />
-          <ModeToggle />
-        </Container>
-      </header>
-      <main>
+      <Header />
+      <Box component="main" sx={{
+        backgroundColor: 'green', 
+        py:'40px',
+        position:'relative',
+        zIndex:10
+        }}>
         <Sheet
           sx={{
             width: 300,
+            minHeight: "100vh",
             mx: "auto", // margin left & right
             my: 4, // margin top & bottom
             py: 3, // padding top & bottom
@@ -65,8 +65,19 @@ function Layout() {
             Don't have an account?
           </Typography>
         </Sheet>
-      </main>
-      <footer>footer</footer>
+      </Box>
+      <Box component="footer" sx={{
+        py:'20px',
+        backgroundColor: 'blue',
+        color:'#fff',
+        position: 'sticky',
+        bottom:0,
+        width:'100%'
+        }}>
+        footer 
+        <a href="..." style={{color:'white'}}>Link to </a>
+
+      </Box>
     </div>
   );
 }
