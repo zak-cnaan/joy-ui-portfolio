@@ -6,6 +6,7 @@ import {
   Drawer,
   IconButton,
   ModalClose,
+  Sheet,
   Stack,
 } from "@mui/joy";
 import React from "react";
@@ -14,17 +15,19 @@ import ModeToggle from "./ModeToggle";
 function Header() {
   const [open, setOpen] = React.useState(false);
   return (
-    <Box
+    <Sheet
       component="header"
-      sx={{
+      sx={() => (
+        {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
         position: "sticky",
         zIndex:20,
         top: 0,
-        backgroundColor: "red",
-      }}
+        backgroundColor: 'background.surface',
+      }
+  )}
     >
       <Container>
         <Stack
@@ -96,7 +99,7 @@ function Header() {
           </Drawer>
         </Box>
       </Container>
-    </Box>
+    </Sheet>
   );
 }
 
