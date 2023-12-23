@@ -1,6 +1,8 @@
 import { Box, Container } from "@mui/joy";
 import ChangeTheme from "./ChangeTheme";
 import MobileDrawer from "./MobileDrawer";
+import TopNav from "./menues/TopNav";
+import Logo from "./Logo";
 
 function Header() {
   return (
@@ -28,8 +30,22 @@ function Header() {
         },
       })}
     >
-      <Container>
-        <a href="...">Logo</a>
+      <Container
+        sx={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+      <Logo />
+        <Box
+          sx={{
+            ml: "auto",
+            mr: 2,
+            display: { xs: "none", sm: "flex" },
+          }}
+        >
+          <TopNav variant="web" />
+        </Box>
         <ChangeTheme />
         <MobileDrawer />
       </Container>
@@ -38,4 +54,3 @@ function Header() {
 }
 
 export default Header;
-

@@ -1,35 +1,39 @@
 import { Box, Container } from "@mui/joy";
+import SocialNav from "./menues/SocialNav";
 
 function Footer() {
   return (
-    <Box
-      component="footer"
-      sx={(theme) => ({
-        position: "sticky",
-        bottom: 0,
-        backgroundColor: "background.surface",
-        color: "text.secondary",
-        textAlign: "center",
-        borderTop: 1,
-        borderTopColor: "neutral.outlinedBorder",
+    <>
+      <Box
+        component="footer"
+        sx={(theme) => ({
+          position: "sticky",
+          bottom: 0,
+          backgroundColor: "background.surface",
+          color: "text.secondary",
+          textAlign: "center",
+          borderTop: 1,
+          borderTopColor: "neutral.outlinedBorder",
 
-        py: 2,
-        fontSize: "sm",
+          py: 2,
+          fontSize: "sm",
 
-        [theme.breakpoints.up("md")]: {
-          py: 3,
-          fontSize: "md",
-        },
-        [theme.breakpoints.up("xl")]: {
-          py: 4,
-          fontSize: "lg",
-        },
-      })}
-    >
-      <Container>
-        &copy; 2023 &hearts; <span>zak cnaan</span>
-      </Container>
-    </Box>
+          [theme.breakpoints.up("md")]: {
+            py: 3,
+            fontSize: "md",
+          },
+          [theme.breakpoints.up("xl")]: {
+            py: 4,
+            fontSize: "lg",
+          },
+        })}
+      >
+        <Container>
+          <SocialNav />
+          &copy; 2023 &hearts; <span>zak cnaan</span>
+        </Container>
+      </Box>
+    </>
   );
 }
 

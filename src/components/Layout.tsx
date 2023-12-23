@@ -1,8 +1,8 @@
 import { Box } from "@mui/joy";
 import Header from "./Header";
 import Footer from "./Footer";
-import Cards from "./Cards";
-import Theming from "./Theming";
+import Cards from "./sink/Cards";
+import Theming from "./sink/Theming";
 
 function Layout() {
   return (

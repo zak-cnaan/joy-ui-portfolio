@@ -12,8 +12,8 @@ function App() {
           color: "var(--Icon-color)",
           margin: "var(--Icon-margin)",
           fontSize: "var(--Icon-fontSize, inherit)",
-          // width: "1em",
-          // height: "1em"
+          width: "1em",
+          height: "1em"
         },
 
       }}></GlobalStyles>

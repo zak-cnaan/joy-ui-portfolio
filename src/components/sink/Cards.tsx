@@ -22,6 +22,7 @@ function Cards() {
         return colorVals.map((color) => {
           return (
             <Box
+            key={background + color}
               sx={{
                 backgroundColor: background,
                 color: color,
