@@ -7,7 +7,6 @@ function Footer() {
       sx={(theme) => ({
         position: "sticky",
         bottom: 0,
-        width: "100%",
         backgroundColor: "background.surface",
         color: "text.secondary",
         textAlign: "center",

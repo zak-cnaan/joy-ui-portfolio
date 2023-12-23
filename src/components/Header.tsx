@@ -17,7 +17,7 @@ function Header() {
   return (
     <Sheet
       component="header"
-      sx={() => (
+      sx={(theme) => (
         {
         display: "flex",
         alignItems: "center",
@@ -25,11 +25,28 @@ function Header() {
         position: "sticky",
         zIndex:20,
         top: 0,
-        backgroundColor: 'background.surface',
+
+        backgroundColor: "background.surface",
+        color: "text.secondary",
+        borderBottom: 1,
+        borderBottomColor: "neutral.outlinedBorder",
+
+        py: 2,
+        fontSize: "sm",
+
+        [theme.breakpoints.up("md")]: {
+          py: 3,
+          fontSize: "md",
+        },
+        [theme.breakpoints.up("xl")]: {
+          py: 4,
+          fontSize: "lg",
+        },
       }
   )}
     >
       <Container>
+        <a href="...">Logo</a>
         <Stack
           direction="row"
           justifyContent="center"
