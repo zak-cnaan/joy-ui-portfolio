@@ -1,19 +1,18 @@
 import { Box, Container } from "@mui/joy";
-import ChangeTheme from "./ChangeTheme";
-import MobileDrawer from "./MobileDrawer";
 
-function Header() {
+function Footer() {
   return (
     <Box
-      component="header"
+      component="footer"
       sx={(theme) => ({
         position: "sticky",
-        top: 0,
-        zIndex: 30,
+        bottom: 0,
+
         backgroundColor: "background.surface",
         color: "text.secondary",
-        borderBottom: 1,
-        borderBottomColor: "neutral.outlinedBorder",
+        borderTop: 1,
+        borderTopColor: "neutral.outlinedBorder",
+        textAlign: "center",
 
         py: 2,
         fontSize: "sm",
@@ -28,14 +27,9 @@ function Header() {
         },
       })}
     >
-      <Container>
-        <a href="...">Logo</a>
-        <ChangeTheme />
-        <MobileDrawer />
-      </Container>
+      <Container>&copy; 2024 &hearts; zak cnaan</Container>
     </Box>
   );
 }
 
-export default Header;
-
+export default Footer;

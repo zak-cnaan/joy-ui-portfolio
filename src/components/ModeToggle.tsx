@@ -1,4 +1,4 @@
-import { Button, IconButton, useColorScheme } from "@mui/joy";
+import { IconButton, useColorScheme } from "@mui/joy";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import React from "react";
 
@@ -21,42 +21,33 @@ function ModeToggle() {
 
   return (
     <>
-     
-     <IconButton disabled={!true} variant="solid"
-        onClick={toggleDarkMode}
-      >
-         <DarkModeSwitch
-        checked={mode === "light"}
-        onChange={() => null}
-        size={24}
-      />
+      <IconButton disabled={!true} variant="solid" onClick={toggleDarkMode}>
+        <DarkModeSwitch
+          checked={mode === "light"}
+          onChange={() => null}
+          size={24}
+        />
       </IconButton>
-      <IconButton disabled={!true} variant="outlined"
-        onClick={toggleDarkMode}
-      >
-         <DarkModeSwitch
-        checked={mode === "light"}
-        onChange={() => null}
-        size={24}
-      />
+      <IconButton disabled={!true} variant="outlined" onClick={toggleDarkMode}>
+        <DarkModeSwitch
+          checked={mode === "light"}
+          onChange={() => null}
+          size={24}
+        />
       </IconButton>
-      <IconButton disabled={!true} variant="plain"
-        onClick={toggleDarkMode}
-      >
-         <DarkModeSwitch
-        checked={mode === "light"}
-        onChange={() => null}
-        size={24}
-      />
+      <IconButton disabled={!true} variant="plain" onClick={toggleDarkMode}>
+        <DarkModeSwitch
+          checked={mode === "light"}
+          onChange={() => null}
+          size={24}
+        />
       </IconButton>
-      <IconButton disabled={!true} variant="soft"
-        onClick={toggleDarkMode}
-      >
-         <DarkModeSwitch
-        checked={mode === "light"}
-        onChange={() => null}
-        size={24}
-      />
+      <IconButton disabled={!true} variant="soft" onClick={toggleDarkMode}>
+        <DarkModeSwitch
+          checked={mode === "light"}
+          onChange={() => null}
+          size={24}
+        />
       </IconButton>
     </>
   );

@@ -1,5 +1,6 @@
-import Layout from "./components/Layout";
 import { CssBaseline, CssVarsProvider, GlobalStyles } from "@mui/joy";
+import Layout from "./components/Layout";
+//import Layout from "./Layout";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
           fontSize: "var(--Icon-fontSize, inherit)",
           // width: "1em",
           // height: "1em"
-        }
+        },
+
       }}></GlobalStyles>
       <CssBaseline />
       <Layout />
