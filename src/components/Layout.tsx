@@ -3,6 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Cards from "./sink/Cards";
 import Theming from "./sink/Theming";
+import Hero1 from "../un-themed/Hero1";
 
 function Layout() {
   return (
@@ -23,6 +24,7 @@ function Layout() {
           zIndex: 20,
         }}
       >
+        <Hero1 />
         <Cards />
         <Theming />
       </Box>
