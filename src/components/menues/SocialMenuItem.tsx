@@ -1,7 +1,7 @@
 import { IconButton } from "@mui/joy";
 import { IconType } from "react-icons";
 
-function SocialMenuItem(props: { link: string; icon: IconType; v?: any }) {
+function SocialMenuItem(props: { link: string; icon: IconType; }) {
   return (
     <li style={{ display: "inline-flex" }}>
       <IconButton

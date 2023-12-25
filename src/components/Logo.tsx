@@ -1,6 +1,11 @@
 // import { SiLinkerd } from "react-icons/si";
 import { styled } from "@mui/joy/styles";
 
+    const bp1 = getComputedStyle(document.documentElement)
+    .getPropertyValue('--bp1');
+
+    const up = `@media (min-Width: ${bp1})`;
+
 const Icon = styled("a")(({ theme }) => ({
   display: "inline-flex",
   alignItems: "center",
@@ -9,6 +14,10 @@ const Icon = styled("a")(({ theme }) => ({
   textDecoration: "none",
   color: theme.palette.text.secondary,
   fontSize:theme.fontSize.md,
+  [up]:{
+    color:'red'
+
+  },
 //   [theme.breakpoints.up("xl")]: {
 //     gap: 16,
 //   },
